@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<%- include('./partials/head.ejs') %>
+
+<body>
+
+  <header>
+    <%- include('./partials/nav.ejs') %>
+  </header>
+
+  <div class="container">
+    <div class="jumbotron" style="margin-top: 200px">
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <h1><%= deputado.nome %> </h1>
+        <img src="<%= deputado.urlFoto %>" alt="<%= deputado.nome %>">
+      </div>
+    </div>
+
+    <div class="jumbotron">
+      <ul class="list-group">
+        <li class="list-group-item"><%= deputado.siglaUf %> </li>
+        <li class="list-group-item"><%= deputado.siglaPartido %> </li>
+        <li class="list-group-item"><%= deputado.email %> </li>
+        <li class="list-group-item"><%= deputado.situacao %> </li>
+      </ul>
+    </div>
+  </div>
+
+  <%- include('./partials/scripts.ejs') %>
+</body>
+</html>
